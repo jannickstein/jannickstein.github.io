@@ -20,6 +20,10 @@
             justify-content: center;
             gap: 30px;
             margin-bottom: 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
         }
         .header a {
             color: #888;
@@ -29,6 +33,7 @@
         .content {
             text-align: center;
             line-height: 1.6;
+            margin-top: 80px; /* this is to prevent the content from being hidden under the fixed header */
         }
         .social-links {
             display: flex;
@@ -39,12 +44,6 @@
         .social-links a {
             color: #333;
             text-decoration: none;
-        }
-        .footnote {
-            color: #888;
-            font-size: 0.8em;
-            text-align: center;
-            margin-top: 50px;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -63,7 +62,6 @@
         <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
         <a href="mailto:your@email.com">Mail</a>
     </div>
-    <p class="footnote">Powered by GitHub Pages</p>
     <script>
         $(document).ready(function(){
             loadContent('jannick-stein');
@@ -101,4 +99,3 @@
     </script>
 </body>
 </html>
-
