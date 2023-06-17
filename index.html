@@ -15,7 +15,8 @@
             background-color: #f0f0f0;
             color: #333;
         }
-        h1 {
+        h1, h2 {
+            color: #888;
             margin-bottom: 50px;
         }
         .repeating-pattern {
@@ -38,23 +39,35 @@
             color: #333;
             text-decoration: none;
         }
+        .footnote {
+            color: #888;
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
-    <h1>Jannick Stein</h1>
-    <div class="repeating-pattern">
+    <h1><a href="#jannick-stein">Jannick Stein</a></h1>
+    <h2><a href="#community">Community</a></h2>
+    <h2><a href="#food">Food</a></h2>
+    <div id="jannick-stein" class="repeating-pattern">
         <p>Building Chiefs of Stuff</p>
         <p>London</p>
         <p>Business Ops at Ledgy</p>
         <p>London</p>
     </div>
-    <div class="bio">
-        <p>Founders’ Associate and employee #2 at Acapela. Short stints in VC and strategy consulting. BBA from the University of St. Gallen. I like traveling, learning, tennis, skiing & eating out. In love with coffee. I’ve played the drums for 10+ years.</p>
+    <div id="community" class="bio">
+        <p>Insert your community content here.</p>
+    </div>
+    <div id="food" class="bio">
+        <p>Insert your food content here.</p>
     </div>
     <div class="social-links">
-        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-        <a href="mailto:your@email.com">Mail</a>
+        <a href="https://linkedin.com/in/jannickstein" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/jannickstein" target="_blank">Twitter</a>
+        <a href="https://instagram.com/jannickstein" target="_blank">Instagram</a>
     </div>
+    <p class="footnote">Powered by GitHub Pages</p>
 </body>
 </html>
