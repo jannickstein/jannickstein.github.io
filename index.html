@@ -18,24 +18,24 @@
         .header {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 30px;
             position: fixed;
-            top: 0;
+            top: 50%;
             left: 0;
             right: 0;
-            bottom: 0;
+            transform: translateY(-50%);
             background-color: #f0f0f0;
         }
         .header a {
-            color: #888;
+            color: #aaa; /* Lightened the gray color */
             text-decoration: none;
             font-size: 1em;
         }
-        .content {
+        .content-container {
             display: none;
             text-align: center;
             line-height: 1.6;
+            margin-top: 80px; /* this is to prevent the content from being hidden under the fixed header */
         }
         .social-links {
             display: flex;
@@ -56,8 +56,14 @@
         <a href="#" class="header-link" id="community">Community</a>
         <a href="#" class="header-link" id="food">Food</a>
     </div>
-    <div id="content" class="content">
-        <!-- Content will be loaded here -->
+    <div id="content-jannick-stein" class="content-container">
+        <!-- Jannick Stein content goes here -->
+    </div>
+    <div id="content-community" class="content-container">
+        <!-- Community content goes here -->
+    </div>
+    <div id="content-food" class="content-container">
+        <!-- Food content goes here -->
     </div>
     <div class="social-links">
         <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
@@ -68,33 +74,18 @@
         $(document).ready(function(){
             $('.header-link').click(function(){
                 var id = $(this).attr('id');
-                loadContent(id);
+                showContent(id);
                 highlightLink(id);
             });
         });
 
-        function loadContent(page){
-            var content = '';
-
-            switch(page){
-                case 'jannick-stein':
-                    content = '<p>Building Chiefs of Stuff</p><p>London</p><p>Business Ops at Ledgy</p><p>London</p>';
-                    break;
-                case 'community':
-                    content = '<p>Insert your community content here.</p>';
-                    break;
-                case 'food':
-                    content = '<p>Insert your food content here.</p>';
-                    break;
-            }
-
-            $('#content').html(content);
-            $('#content').show();
-            $('.header').css('position', 'static');
+        function showContent(id){
+            $('.content-container').hide();
+            $('#content-' + id).show();
         }
 
         function highlightLink(id){
-            $('.header-link').css('color', '#888');
+            $('.header-link').css('color', '#aaa');
             $('#' + id).css('color', '#000');
         }
     </script>
