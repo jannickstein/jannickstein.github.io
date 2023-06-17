@@ -15,9 +15,15 @@
             background-color: #f0f0f0;
             color: #333;
         }
-        h1, h2 {
-            color: #888;
+        .header {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             margin-bottom: 50px;
+        }
+        .header a {
+            color: #888;
+            text-decoration: none;
         }
         .repeating-pattern {
             text-align: center;
@@ -48,9 +54,11 @@
     </style>
 </head>
 <body>
-    <h1><a href="#jannick-stein">Jannick Stein</a></h1>
-    <h2><a href="#community">Community</a></h2>
-    <h2><a href="#food">Food</a></h2>
+    <div class="header">
+        <h1><a href="#jannick-stein">Jannick Stein</a></h1>
+        <h2><a href="#community">Community</a></h2>
+        <h2><a href="#food">Food</a></h2>
+    </div>
     <div id="jannick-stein" class="repeating-pattern">
         <p>Building Chiefs of Stuff</p>
         <p>London</p>
@@ -64,8 +72,9 @@
         <p>Insert your food content here.</p>
     </div>
     <div class="social-links">
-        <a href="https://twitter.com/jannickstein" target="_blank">Twitter</a>
-        <a href="https://linkedin.com/in/jannickstein" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="mailto:your@email.com">Mail</a>
     </div>
     <p class="footnote">Powered by GitHub Pages</p>
 </body>
