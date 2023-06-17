@@ -24,14 +24,9 @@
         .header a {
             color: #888;
             text-decoration: none;
+            font-size: 1em;
         }
-        .repeating-pattern {
-            text-align: center;
-            line-height: 1.6;
-        }
-        .bio {
-            max-width: 600px;
-            margin: 50px auto;
+        .content {
             text-align: center;
             line-height: 1.6;
         }
@@ -52,24 +47,16 @@
             margin-top: 50px;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header">
-        <h1><a href="#jannick-stein">Jannick Stein</a></h1>
-        <h2><a href="#community">Community</a></h2>
-        <h2><a href="#food">Food</a></h2>
+        <a href="#" id="jannick-stein">Jannick Stein</a>
+        <a href="#" id="community">Community</a>
+        <a href="#" id="food">Food</a>
     </div>
-    <div id="jannick-stein" class="repeating-pattern">
-        <p>Building Chiefs of Stuff</p>
-        <p>London</p>
-        <p>Business Ops at Ledgy</p>
-        <p>London</p>
-    </div>
-    <div id="community" class="bio">
-        <p>Insert your community content here.</p>
-    </div>
-    <div id="food" class="bio">
-        <p>Insert your food content here.</p>
+    <div id="content" class="content">
+        <!-- Content will be loaded here -->
     </div>
     <div class="social-links">
         <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
@@ -77,5 +64,41 @@
         <a href="mailto:your@email.com">Mail</a>
     </div>
     <p class="footnote">Powered by GitHub Pages</p>
+    <script>
+        $(document).ready(function(){
+            loadContent('jannick-stein');
+
+            $('#jannick-stein').click(function(){
+                loadContent('jannick-stein');
+            });
+
+            $('#community').click(function(){
+                loadContent('community');
+            });
+
+            $('#food').click(function(){
+                loadContent('food');
+            });
+        });
+
+        function loadContent(page){
+            var content = '';
+
+            switch(page){
+                case 'jannick-stein':
+                    content = '<p>Building Chiefs of Stuff</p><p>London</p><p>Business Ops at Ledgy</p><p>London</p>';
+                    break;
+                case 'community':
+                    content = '<p>Insert your community content here.</p>';
+                    break;
+                case 'food':
+                    content = '<p>Insert your food content here.</p>';
+                    break;
+            }
+
+            $('#content').html(content);
+        }
+    </script>
 </body>
 </html>
+
