@@ -18,12 +18,13 @@
         .header {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 30px;
-            margin-bottom: 50px;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+            bottom: 0;
             background-color: #f0f0f0;
         }
         .header a {
@@ -32,9 +33,9 @@
             font-size: 1em;
         }
         .content {
+            display: none;
             text-align: center;
             line-height: 1.6;
-            margin-top: 80px; /* this is to prevent the content from being hidden under the fixed header */
         }
         .social-links {
             display: flex;
@@ -65,9 +66,6 @@
     </div>
     <script>
         $(document).ready(function(){
-            loadContent('jannick-stein');
-            highlightLink('jannick-stein');
-
             $('.header-link').click(function(){
                 var id = $(this).attr('id');
                 loadContent(id);
@@ -91,10 +89,14 @@
             }
 
             $('#content').html(content);
+            $('#content').show();
+            $('.header').css('position', 'static');
         }
 
         function highlightLink(id){
             $('.header-link').css('color', '#888');
             $('#' + id).css('color', '#000');
         }
-    </
+    </script>
+</body>
+</html>
