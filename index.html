@@ -22,8 +22,9 @@
             margin-bottom: 50px;
             position: fixed;
             top: 0;
-            width: 100%;
-            background-color: #fff;
+            left: 0;
+            right: 0;
+            background-color: #f0f0f0;
         }
         .header a {
             color: #888;
@@ -50,9 +51,9 @@
 </head>
 <body>
     <div class="header">
-        <a href="#" id="jannick-stein">Jannick Stein</a>
-        <a href="#" id="community">Community</a>
-        <a href="#" id="food">Food</a>
+        <a href="#" class="header-link" id="jannick-stein">Jannick Stein</a>
+        <a href="#" class="header-link" id="community">Community</a>
+        <a href="#" class="header-link" id="food">Food</a>
     </div>
     <div id="content" class="content">
         <!-- Content will be loaded here -->
@@ -65,17 +66,12 @@
     <script>
         $(document).ready(function(){
             loadContent('jannick-stein');
+            highlightLink('jannick-stein');
 
-            $('#jannick-stein').click(function(){
-                loadContent('jannick-stein');
-            });
-
-            $('#community').click(function(){
-                loadContent('community');
-            });
-
-            $('#food').click(function(){
-                loadContent('food');
+            $('.header-link').click(function(){
+                var id = $(this).attr('id');
+                loadContent(id);
+                highlightLink(id);
             });
         });
 
@@ -96,6 +92,9 @@
 
             $('#content').html(content);
         }
-    </script>
-</body>
-</html>
+
+        function highlightLink(id){
+            $('.header-link').css('color', '#888');
+            $('#' + id).css('color', '#000');
+        }
+    </
