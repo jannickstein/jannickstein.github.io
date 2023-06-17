@@ -43,6 +43,7 @@ body {
   justify-content: center;  
   gap: 20px;  
   width: 100%;
+  margin-top: 20px;
 }  
 .social-links a {  
   color: #333;  
@@ -83,25 +84,25 @@ body {
         <a href="https://instagram.com/jannickstein">Instagram</a>
     </div>
 <script>
-  $(document).ready(function(){
-    showContent('jannick-stein');  /* Show Jannick Stein's content on page load */
+        $(document).ready(function(){
+            $('#jannick-stein').css('color', '#333');
+            $('.header-link').click(function(){
+                var id = $(this).attr('id');
+                showContent(id);
+                highlightLink(id);
+            });
+            showContent('jannick-stein');
+        });
 
-    $('.header-link').click(function(){
-      var id = $(this).attr('id');
-      showContent(id);
-      highlightLink(id);
-    });
-  });
+        function showContent(id){
+            $('.content-container').hide();
+            $('#content-' + id).show();
+        }
 
-  function showContent(id){
-    $('.content-container').hide();
-    $('#content-' + id).show();
-  }
-
-  function highlightLink(id){
-    $('.header-link').css('color', '#ccc');
-    $('#' + id).css('color', '#333');
-  }
-</script>
+        function highlightLink(id){
+            $('.header-link').css('color', '#ccc');
+            $('#' + id).css('color', '#333');
+        }
+    </script>
 </body>
 </html>
