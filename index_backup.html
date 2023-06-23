@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jannick Stein</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>  
+body {  
+  font-family: Arial, sans-serif;  
+  margin: 0;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  min-height: 100vh;  
+  background-color: #FFFFFF;  
+  color: #1C1C1C;  
+}  
+.header {  
+  display: flex;  
+  justify-content: center;  
+  gap: 25px;  
+  position: absolute;
+  top: 40px;
+  width: 100%;  
+  margin-top: 200px; 
+  <!-- margin-top to be fixed, leads to overlap of texts -->
+}  
+.header a {  
+  color: #CCC;  
+  text-decoration: none;  
+  font-size: 1em;  
+}  
+.content-container {  
+  display: none;  
+  text-align: left;  
+  line-height: 1.6;  
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+}  
+.social-links {  
+  display: flex;  
+  justify-content: center;  
+  gap: 20px;  
+  width: 100%;
+  margin-top: 60px;
+}  
+.social-links a {  
+  color: #CCC;  
+  text-decoration: none;
+}  
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        top: 0;
+    }
+
+    .content-container {
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    .social-links {
+        margin-top: 50px;
+    }
+}
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="header-link" id="jannick-stein">Jannick Stein</a>
+        <a href="#" class="header-link" id="community">Community</a>
+    </div>
+    <div id="content-jannick-stein" class="content-container">
+        <p>
+            I'm usually somewhere pushing strategic projects or analyzing metrics at 
+            <a href="https://ledgy.com" style="color: #1C1C1C"; target="_blank">Ledgy</a>, a Series B equity management platform backed by NEA, Sequoia, etc.</p>
+        <p>
+            Apart from that, I'm also growing <a href="https://chiefsofstuff.com" style="color: #1C1C1C"; target="_blank">Chiefs of Stuff</a>, a global community for early-stage generalist operators. Additionally, I enjoy studying technology, history and markets.</p>
+        <p>
+            German in London, St. Gallen undergrad, coffee aficionado, avid traveler.</p>
+<div class="social-links">
+        <a href="https://linkedin.com/in/jannickstein" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/jannickstein" target="_blank">Twitter</a>
+        <a href="https://instagram.com/jannickstein" target="_blank">Instagram</a>
+    </div>
+    </div>
+    <div id="content-community" class="content-container">
+        <p>
+            In 2021, I joined a team of three as a Founders' Associate. Faced with numerous diverse generalist tasks, I founded a group called <a href="https://chiefsofstuff.com" style="color: #1C1C1C"; target="_blank">Chiefs of Stuff</a> in Berlin.</p>
+        <p>
+            There was much more interest than I anticipated.  Our group has grown into a global community of 300+ ambitious generalist operators who aspire to make a real impact.</p>
+        <p> 
+            Some Chiefs have already founded or work at world-class companies and VC firms.</p>
+<div class="social-links">
+        <a href="https://linkedin.com/in/jannickstein" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/jannickstein" target="_blank">Twitter</a>
+        <a href="https://instagram.com/jannickstein" target="_blank">Instagram</a>
+    </div>
+<script>
+        $(document).ready(function(){
+            $('#jannick-stein').css('color', '#333');
+            $('.header-link').click(function(){
+                var id = $(this).attr('id');
+                showContent(id);
+                highlightLink(id);
+            });
+            showContent('jannick-stein');
+        });
+
+        function showContent(id){
+            $('.content-container').hide();
+            $('#content-' + id).show();
+        }
+
+        function highlightLink(id){
+            $('.header-link').css('color', '#ccc');
+            $('#' + id).css('color', '#333');
+        }
+    </script>
+</body>
+</html>
