@@ -1,28 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jannick Stein</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
             overflow: hidden;
         }
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .contact ul {
+            padding-left: 0;
+        }
+        .contact li {
+            display: inline;
+            margin-right: 20px;
+        }
+        a {
+            color: #0000EE;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://jannickstein.framer.ai/" frameborder="0"></iframe>
+    <div class="container">
+        <h1>Jannick Stein</h1>
+        <h2>Operator & Community-builder</h2>
+        <p>London</p>
+
+        <section>
+            <h2>Now</h2>
+            <ul>
+                <li>Chief of Staff, <a href="https://ledgy.com/" target="_blank">Ledgy</a></li>
+                <li>Founder, <a href="https://chiefsofstuff.com/" target="_blank">Chiefs Of Stuff</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Previously</h2>
+            <ul>
+                <li>Founders' Associate, <a href="https://techcrunch.com/2020/10/21/acapela/" target="_blank">Acapela</a></li>
+                <li>VC, <a href="https://www.b2venture.vc/" target="_blank">b2venture</a> & <a href="https://www.globalfounderscapital.com/" target="_blank">GFC</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Other</h2>
+            <ul>
+                <li>WEF Global Shaper</li>
+                <li>University of St. Gallen (BA)</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="https://twitter.com/jannickstein" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/jannickstein" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
