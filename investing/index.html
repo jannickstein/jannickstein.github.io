@@ -33,6 +33,14 @@
             align-items: center;
             justify-content: flex-start;
             overflow: hidden;
+        body {
+            margin: 0;
+            font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
         }
 
         .layout {
@@ -44,6 +52,17 @@
 
         nav {
             flex: 0 0 auto;
+            gap: clamp(2.5rem, 6vw, 4.5rem);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 7vw, 5rem) clamp(1.75rem, 6vw, 4rem) 5rem;
+        }
+
+        nav {
+            flex: 0 0 200px;
+            position: sticky;
+            top: clamp(2rem, 6vw, 4rem);
+            align-self: flex-start;
         }
 
         .nav-links {
@@ -59,6 +78,7 @@
         .nav-links span {
             font-weight: 500;
             letter-spacing: 0.015em;
+            letter-spacing: 0.02em;
             text-decoration: none;
             color: inherit;
             border-bottom: 1px solid transparent;
@@ -77,6 +97,7 @@
         main {
             flex: 1 1 auto;
             max-width: 520px;
+            max-width: 640px;
         }
 
         p {
@@ -85,6 +106,7 @@
 
         p + p {
             margin-top: 1rem;
+            margin-top: 1.4rem;
         }
 
         a {
@@ -112,12 +134,25 @@
                 gap: 2rem;
                 width: 100%;
                 margin: 0;
+        @media (max-width: 860px) {
+            .layout {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            nav {
+                position: static;
             }
         }
 
         @media (max-width: 640px) {
             body {
                 font-size: 14.5px;
+                font-size: 16px;
+            }
+
+            .layout {
+                padding: 2.25rem 1.5rem 4rem;
             }
         }
     </style>
@@ -128,6 +163,7 @@
             <ul class="nav-links">
                 <li><a href="/">About</a></li>
                 <li><a href="/community/">Community</a></li>
+                <li><a href="/chiefsofstuff/">Community</a></li>
                 <li><span class="active">Investing</span></li>
             </ul>
         </nav>
