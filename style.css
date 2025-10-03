@@ -105,11 +105,28 @@ a:focus {
     }
 
     .wrapper {
-        gap: 1rem;
-        padding: clamp(1.25rem, 6vw, 2rem) clamp(1.25rem, 6vw, 2rem) clamp(3.5rem, 12vw, 5rem);
+        gap: clamp(0.35rem, 3vw, 0.75rem);
+        padding: clamp(0.75rem, 4vw, 1.25rem) clamp(1.25rem, 6vw, 2rem) clamp(2.5rem, 9vw, 3.5rem);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        padding-top: 0.4rem;
     }
 
     main {
         max-width: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: clamp(0.75rem, 5vw, 1.5rem);
+    }
+
+    .nav-links li {
+        display: flex;
+        align-items: center;
     }
 }
