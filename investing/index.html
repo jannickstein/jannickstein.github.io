@@ -19,8 +19,8 @@
         body {
             margin: 0;
             font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-            font-size: 17px;
-            line-height: 1.65;
+            font-size: 18px;
+            line-height: 1.7;
             color: var(--text);
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
@@ -28,16 +28,16 @@
 
         .layout {
             display: flex;
-            gap: clamp(2rem, 5vw, 3rem);
-            max-width: 980px;
-            margin: 0;
-            padding: clamp(2.25rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem) 4.5rem clamp(2.5rem, 8vw, 6rem);
+            gap: clamp(2.5rem, 6vw, 4.5rem);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 7vw, 5rem) clamp(1.75rem, 6vw, 4rem) 5rem;
         }
 
         nav {
-            flex: 0 0 160px;
+            flex: 0 0 200px;
             position: sticky;
-            top: clamp(2rem, 5vw, 3.5rem);
+            top: clamp(2rem, 6vw, 4rem);
             align-self: flex-start;
         }
 
@@ -71,7 +71,7 @@
 
         main {
             flex: 1 1 auto;
-            max-width: 560px;
+            max-width: 640px;
         }
 
         p {
@@ -98,7 +98,6 @@
             .layout {
                 flex-direction: column;
                 gap: 2rem;
-                padding: clamp(2rem, 8vw, 3rem) clamp(1.5rem, 6vw, 3rem) 3.75rem;
             }
 
             nav {
@@ -112,7 +111,7 @@
             }
 
             .layout {
-                padding: 1.75rem 1.5rem 3.25rem;
+                padding: 2.25rem 1.5rem 4rem;
             }
         }
     </style>
