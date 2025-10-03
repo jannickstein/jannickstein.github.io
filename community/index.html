@@ -24,6 +24,14 @@
         body {
             margin: 0;
             font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             font-size: 15.5px;
             line-height: 1.6;
             color: var(--text);
@@ -39,6 +47,13 @@
 
         .layout {
             display: flex;
+            gap: clamp(1.5rem, 3.5vw, 2.5rem);
+            width: min(760px, calc(100vw - clamp(3.5rem, 12vw, 8rem)));
+            margin-left: clamp(1.75rem, 7vw, 5rem);
+        }
+
+        nav {
+            flex: 0 0 auto;
             align-items: flex-start;
             gap: clamp(1.65rem, 4vw, 2.35rem);
             width: min(660px, 100%);
@@ -63,6 +78,7 @@
         .nav-links a,
         .nav-links span {
             font-weight: 500;
+            letter-spacing: 0.015em;
             letter-spacing: 0.02em;
             text-decoration: none;
             color: inherit;
@@ -81,6 +97,7 @@
 
         main {
             flex: 1 1 auto;
+            max-width: 520px;
             max-width: 510px;
         }
 
@@ -89,6 +106,7 @@
         }
 
         p + p {
+            margin-top: 1rem;
             margin-top: 1.2rem;
         }
 
@@ -104,6 +122,12 @@
             border-color: var(--text);
         }
 
+        @media (max-width: 880px), (max-height: 680px) {
+            body {
+                display: block;
+                height: auto;
+                overflow: auto;
+                padding: clamp(2.25rem, 8vw, 3rem) clamp(1.75rem, 6vw, 3rem) clamp(2.75rem, 9vw, 3.5rem);
         @media (max-width: 860px) {
             body {
                 display: block;
@@ -113,6 +137,9 @@
 
             .layout {
                 flex-direction: column;
+                gap: 2rem;
+                width: 100%;
+                margin: 0;
                 gap: 1.75rem;
                 width: 100%;
             }
@@ -124,6 +151,7 @@
 
         @media (max-width: 640px) {
             body {
+                font-size: 14.5px;
                 font-size: 15px;
             }
         }
