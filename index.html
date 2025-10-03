@@ -24,31 +24,74 @@
         body {
             margin: 0;
             font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-            font-size: clamp(14px, 1.3vw, 15px);
-            line-height: 1.6;
-            letter-spacing: 0.01em;
+            font-size: 15px;
+            line-height: 1.5;
             color: var(--text);
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
-            padding: clamp(2.15rem, 7vh, 3rem) clamp(2.85rem, 6.5vw, 4.1rem);
             overflow: hidden;
         }
 
         .layout {
             display: flex;
-            align-items: flex-start;
-            gap: clamp(1.1rem, 2.5vw, 1.65rem);
-            width: min(500px, 100%);
+            gap: clamp(1.5rem, 3.5vw, 2.5rem);
+            width: min(760px, calc(100vw - clamp(3.5rem, 12vw, 8rem)));
+            margin-left: clamp(1.75rem, 7vw, 5rem);
         }
 
         nav {
-            flex: 0 0 clamp(78px, 9vw, 90px);
+            flex: 0 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .nav-links a,
+        .nav-links span {
+            font-weight: 500;
+            letter-spacing: 0.015em;
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 0.1rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            border-color: var(--accent);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .layout {
+            display: flex;
+            gap: clamp(2.5rem, 6vw, 4.5rem);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 7vw, 5rem) clamp(1.75rem, 6vw, 4rem) 5rem;
+        }
+
+        nav {
+            flex: 0 0 200px;
             position: sticky;
-            top: clamp(1.85rem, 6vh, 2.75rem);
+            top: clamp(2rem, 6vw, 4rem);
             align-self: flex-start;
         }
 
@@ -82,7 +125,8 @@
 
         main {
             flex: 1 1 auto;
-            max-width: 360px;
+            max-width: 520px;
+            max-width: 640px;
         }
 
         p {
@@ -90,7 +134,8 @@
         }
 
         p + p {
-            margin-top: 0.95rem;
+            margin-top: 1rem;
+            margin-top: 1.4rem;
         }
 
         a {
@@ -105,36 +150,38 @@
             border-color: var(--text);
         }
 
-        @media (max-height: 780px) and (min-width: 861px) {
-            body {
-                font-size: 13.75px;
-                padding: clamp(1.75rem, 6vh, 2.25rem) clamp(2.35rem, 7vw, 3.25rem);
-            }
-
-            .layout {
-                width: min(470px, 100%);
-            }
-
-            main {
-                max-width: 340px;
-            }
-        }
-
-        @media (max-width: 860px) {
+        @media (max-width: 880px), (max-height: 680px) {
             body {
                 display: block;
-                padding: clamp(1.85rem, 8vw, 3rem) clamp(1.65rem, 6.5vw, 3.15rem);
-                overflow-y: auto;
+                height: auto;
+                overflow: auto;
+                padding: clamp(2.25rem, 8vw, 3rem) clamp(1.75rem, 6vw, 3rem) clamp(2.75rem, 9vw, 3.5rem);
             }
 
             .layout {
                 flex-direction: column;
-                gap: 1.65rem;
+                gap: 2rem;
                 width: 100%;
+                margin: 0;
+        @media (max-width: 860px) {
+            .layout {
+                flex-direction: column;
+                gap: 2rem;
             }
 
             nav {
                 position: static;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 14.5px;
+                font-size: 16px;
+            }
+
+            .layout {
+                padding: 2.25rem 1.5rem 4rem;
             }
         }
     </style>
@@ -145,6 +192,7 @@
             <ul class="nav-links">
                 <li><span class="active">About</span></li>
                 <li><a href="/community/">Community</a></li>
+                <li><a href="/chiefsofstuff/">Community</a></li>
                 <li><a href="/investing/">Investing</a></li>
             </ul>
         </nav>
@@ -152,6 +200,7 @@
             <section>
                 <p>Hi, I’m Jannick.</p>
                 <p>I invest in exceptional people to build startups from scratch at <a href="https://www.joinef.com" target="_blank" rel="noreferrer">Entrepreneurs First</a>. I also run <a href="/community/">Chiefs Of Stuff</a>, a community of hundreds of generalist operators.</p>
+                <p>I invest in exceptional people to build startups from scratch at <a href="https://www.joinef.com" target="_blank" rel="noreferrer">Entrepreneurs First</a>. I also run <a href="/chiefsofstuff/">Chiefs Of Stuff</a>, a community of hundreds of generalist operators.</p>
                 <p>I believe generalists run the world. They embody ambition, curiosity, and, most importantly, versatility. To learn more about generalism, read my blog post: <a href="https://www.generalism.blog/p/the-generalist-edge" target="_blank" rel="noreferrer">The Generalist Edge</a>.</p>
                 <p>Previously, I’ve spent four years working as a Chief of Staff and startup generalist at <a href="https://ledgy.com/" target="_blank" rel="noreferrer">Ledgy</a> and <a href="https://www.producthunt.com/products/acapela" target="_blank" rel="noreferrer">Acapela</a>. I also learned a lot working in VC at <a href="https://www.globalfounderscapital.com/" target="_blank" rel="noreferrer">Global Founders Capital</a>, <a href="https://earlybird.com/" target="_blank" rel="noreferrer">Earlybird</a>, and <a href="https://www.b2venture.vc/" target="_blank" rel="noreferrer">b2venture</a>. I graduated from the University of St. Gallen with a BA in Business Administration.</p>
                 <p>I grew up in Northern Germany and currently live in London. I love coffee, chess, and drumming.</p>
